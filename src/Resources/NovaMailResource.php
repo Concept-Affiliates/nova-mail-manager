@@ -40,6 +40,13 @@ class NovaMailResource extends Resource
     public static $displayInNavigation = false;
 
     /**
+     * Indicates if the resource should be globally searchable.
+     *
+     * @var bool
+     */
+    public static $globallySearchable = false;
+
+	/**
      * @var int
      */
     public static $perPageViaRelationship = 25;
