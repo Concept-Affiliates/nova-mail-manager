@@ -75,7 +75,7 @@ class NovaMailResource extends Resource
 
 			Text::make(__('Subject Extract'), function (){
 				$mailable = unserialize($this->mailable);
-				if (property_exists('subject', $mailable)) {
+				if (property_exists($mailable, 'subject')) {
 					return $mailable->subject;
 				} else {
 					return null;
