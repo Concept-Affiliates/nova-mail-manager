@@ -73,6 +73,11 @@ class NovaMailResource extends Resource
                 return implode(', ', $this->recipients);
             }),
 
+			Text::make(__('Subject Extract'), function (){
+				$mailable = unserialize($this->mailable);
+				return $mailable->subject;
+            }),
+
             Boolean::make(__('Is Queued'), 'is_queued'),
 
             Boolean::make(__('Is Sent'), 'is_sent'),
