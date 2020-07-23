@@ -15,6 +15,7 @@ use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Resource;
 use Illuminate\Http\Request;
 
@@ -62,7 +63,9 @@ class NovaMailResource extends Resource
 
             Text::make(__('Uuid'), 'uuid')->onlyOnDetail(),
 
-            Text::make(__('Mailable'), 'mailable_name'),
+            DateTime::make(__('Timestamp'), 'created_at')->sortable()->readonly(true),
+
+			Text::make(__('Mailable'), 'mailable_name'),
 
             Text::make(__('Subject'), 'subject'),
 
