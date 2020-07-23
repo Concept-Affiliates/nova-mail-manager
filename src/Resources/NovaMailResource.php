@@ -75,7 +75,11 @@ class NovaMailResource extends Resource
 
 			Text::make(__('Subject Extract'), function (){
 				$mailable = unserialize($this->mailable);
-				return $mailable->subject;
+				if (property_exists('subject', $mailable)) {
+					return $mailable->subject;
+				} else {
+					return null;
+				}
             }),
 
             Boolean::make(__('Is Queued'), 'is_queued'),
