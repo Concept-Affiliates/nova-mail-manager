@@ -9,9 +9,15 @@
             "email": "srinathreddydudi@gmail.com"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Concept-Affiliates/laravel-mail-manager.git"
+        },
+    ],
     "require": {
         "php": ">=7.1.0",
-        "binarybuilds/laravel-mail-manager" : "^1.0"
+        "binarybuilds/laravel-mail-manager" : "dev-master"
     },
     "autoload": {
         "psr-4": {
