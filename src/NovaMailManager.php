@@ -25,6 +25,6 @@ class NovaMailManager extends Tool
      */
     public function renderNavigation()
     {
-        return view('nova-mail-manager::navigation');
+        // return view('nova-mail-manager::navigation');
     }
 }
